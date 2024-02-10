@@ -57,7 +57,7 @@ namespace Code.Combat.Systems {
             EventBus.OnUnitEntityDisposed += RemoveUnitEntity;
         }
 
-        public void DestroySubSystems() {
+        public void Dispose() {
             MovementSystem.Dispose();
             BehaviourSystem.Dispose();
             CollisionSystem.Dispose();
@@ -67,6 +67,8 @@ namespace Code.Combat.Systems {
             SpawnHelper.Dispose();
             EventBus.OnUnitControllerRegistered -= AddNewUnitController;
             EventBus.OnUnitEntityRegistered -= AddNewUnitEntity;
+            EventBus.OnUnitControllerDisposed -= RemoveUnitController;
+            EventBus.OnUnitEntityDisposed -= RemoveUnitEntity;
         }
 
         private void AddNewUnitController(UnitController unit) {

@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 1000
   visualType: 1
   colorVisualType: 1
-  maxHealth: 350000
+  maxHealth: 3500
   shield: 10
   moveSpeed: 7

@@ -80,7 +80,7 @@ namespace Code.Core.StateManagement {
         
         
         public override void OnExit(object data) {
-            BattleSystem.DestroySubSystems();
+            BattleSystem.Dispose();
             BattleSystem = null;
 
             EventBus.OnProjectileSelected -= OnProjectileSelected;
